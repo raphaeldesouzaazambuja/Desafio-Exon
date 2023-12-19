@@ -64,16 +64,6 @@
         {
             const $li = $('<li>').appendTo($parent);
             const $span = $('<span>').addClass('item').text(node.label || node.codigo_produto_filho).appendTo($li);
-
-            if (node.children && node.children.length > 0)
-            {
-                const $ul = $('<ul>').appendTo($li);
-
-                node.children.forEach(function (child)
-                {
-                    renderNode(child, $ul);
-                });
-            }
         }
     }
 
